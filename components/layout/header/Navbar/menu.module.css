@@ -1,0 +1,20 @@
+@media (max-width: 1279px) {
+  .header_menu {
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 280px;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    transition: 0.7s;
+    transform: translate(-123vh);
+    background-color: #000;
+  }
+  .responsive_menu {
+    transform: translate(0);
+    opacity: 1;
+    background: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
