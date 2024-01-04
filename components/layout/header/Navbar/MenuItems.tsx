@@ -17,14 +17,9 @@ const NavItems: NavInterface[] = [
   },
   {
     id: 3,
-    title: "Portfolio",
+    title: "Cart",
     path: "#",
     
-  },
-  {
-    id: 4,
-    title: "Contact Us",
-    path: "#",
-  },
+  }
 ];
 export default NavItems;

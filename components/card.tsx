@@ -10,7 +10,7 @@ const ProductCard: React.FC<ProductInterface> = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col justify-between border py-6 px-4">
+      <div className="flex flex-col justify-between border pt-6 px-4 min-h-[370px] max-h-[370px]">
         <div className="p-2">
           <img
             src={image}
@@ -19,17 +19,17 @@ const ProductCard: React.FC<ProductInterface> = ({
           />
           <img src="" alt="" />
           <div className="mt-4">
-            <div className="uppercase text-sm text-indigo-600 font-bold">
+            <div className="uppercase text-sm text-black font-bold">
               {title}
             </div>
 
-            <p className="mt-2 text-gray-900">{description}</p>
+            <p className="mt-2 text-sm text-gray-900">{description}</p>
           </div>
         </div>
 
         <div className="flex justify-between items-center my-4">
-          <div className="text-base font-medium">$ {price}</div>
-          <button className="flex items-center gap-2 px-3 py-1 bg-slate-100 hover:bg-slate-200 rounded font-medium">
+          <div className="text-base font-semibold">${price}</div>
+          <button className="flex items-center gap-2 px-3 py-1 text-sm text-white bg-purple-500 hover:bg-purple-600 rounded font-medium">
             <span><FiShoppingCart /></span> Add to cart
           </button>
         </div>
