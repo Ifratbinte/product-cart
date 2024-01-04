@@ -1,3 +1,4 @@
+import AppProvider from "./provider";
 import "./globals.css";
 import MasterLayout from "@/containers/MasterLayout";
 
@@ -9,7 +10,9 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <MasterLayout>{children}</MasterLayout>
+        <AppProvider>
+          <MasterLayout>{children}</MasterLayout>
+        </AppProvider>
       </body>
     </html>
   );
