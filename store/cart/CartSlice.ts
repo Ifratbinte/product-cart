@@ -1,7 +1,7 @@
 "use client";
 import { createSlice } from "@reduxjs/toolkit";
 
-const carteSlice = createSlice({
+const cartSlice = createSlice({
   name: "Cart",
   initialState: [],
   reducers: {
@@ -13,5 +13,5 @@ const carteSlice = createSlice({
     },
   },
 });
- export const {add, remove} = carteSlice.actions
- export default carteSlice.reducer
+ export const {add, remove} = cartSlice.actions
+ export default cartSlice.reducer

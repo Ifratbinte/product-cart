@@ -18,7 +18,7 @@ const NavItems: NavInterface[] = [
   {
     id: 3,
     title: "Cart",
-    path: "#",
+    path: "/cart",
     
   }
 ];

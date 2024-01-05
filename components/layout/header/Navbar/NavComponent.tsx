@@ -1,24 +1,21 @@
+import { useSelector } from "react-redux";
 import navItems, { NavInterface } from "./MenuItems";
 import NavItem from "./NavItem";
 
 const Nav = () => {
-  console.log({ navItems });
+  // const ProductItem:any = useSelector((state:any)=> {state.cart})
+
+  const item = useSelector((state: any) => state.cart);
 
   return (
     <div className="flex items-center">
       <ul className="menu flex xl:items-center items-start xl:flex-row flex-col xl:ml-10">
         {navItems &&
           navItems.map((item: NavInterface, index: number) => {
-            return (
-              <NavItem
-                key={index}
-                title={item.title}
-                path={item.path}
-              />
-            );
+            return <NavItem key={index} title={item.title} path={item.path} />;
           })}
       </ul>
-      <div className="text-lg font-medium ml-4">Items : 0</div>
+      <div className="text-lg font-medium ml-4">Items : {item.length}</div>
     </div>
   );
 };

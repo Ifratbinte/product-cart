@@ -1,11 +1,10 @@
-import React from 'react'
+"use client";
+import React from "react";
 import { Provider } from "react-redux";
-import store from '../store/store';
+import store from "@/store/Store.js";
 
-const AppProvider = ({children}:any) => {
-  return (
-    <Provider store={store}>{children}</Provider>
-  )
-}
+const AppProvider = ({ children }: any) => {
+  return <Provider store={store}>{children}</Provider>;
+};
 
-export default AppProvider
+export default AppProvider;

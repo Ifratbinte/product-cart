@@ -7,6 +7,7 @@ const ProductCard: React.FC<ProductInterface> = ({
   title,
   description,
   price,
+  handleClick,
 }) => {
   return (
     <>
@@ -29,8 +30,14 @@ const ProductCard: React.FC<ProductInterface> = ({
 
         <div className="flex justify-between items-center my-4">
           <div className="text-base font-semibold">${price}</div>
-          <button className="flex items-center gap-2 px-3 py-1 text-sm text-white bg-purple-500 hover:bg-purple-600 rounded font-medium">
-            <span><FiShoppingCart /></span> Add to cart
+          <button
+            className="flex items-center gap-2 px-3 py-1 text-sm text-white bg-purple-500 hover:bg-purple-600 rounded font-medium"
+            onClick={handleClick}
+          >
+            <span>
+              <FiShoppingCart />
+            </span>
+            Add to cart
           </button>
         </div>
       </div>

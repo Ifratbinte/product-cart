@@ -1,3 +1,4 @@
+// import AppProvider from "@/store/Prvider";
 import AppProvider from "./provider";
 import "./globals.css";
 import MasterLayout from "@/containers/MasterLayout";
