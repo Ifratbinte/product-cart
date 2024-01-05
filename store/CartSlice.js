@@ -1,6 +1,7 @@
 "use client";
 
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const findItemIndex = (items, itemId) =>
   items.findIndex((item) => item.id === itemId);
@@ -31,6 +32,7 @@ const cartSlice = createSlice({
 
         state.data.push({ id, image, title, price, quantity: 1 });
       }
+      toast.success("Item added to cart successfully!");
     },
 
     remove(state, action) {
@@ -43,6 +45,7 @@ const cartSlice = createSlice({
 
       state.total_quantity = quantity;
       state.data = filterData;
+      toast.success("Item remove from cart successfully!");
     },
 
     incrementQuantity: (state, action) => {
