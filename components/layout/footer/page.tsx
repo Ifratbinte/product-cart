@@ -54,22 +54,22 @@ const Footer = () => {
               <ul className="flex">
                 <li className="mr-6">
                   <Link href="#">
-                    <FiFacebook className="w-6 h-6 hover:text-blue-400" />
+                    <FiFacebook className="w-6 h-6 hover:text-purple-600" />
                   </Link>
                 </li>
                 <li className="mr-6">
                   <Link href="#">
-                    <FiTwitter className="w-6 h-6 hover:text-blue-400" />
+                    <FiTwitter className="w-6 h-6 hover:text-purple-600" />
                   </Link>
                 </li>
                 <li className="mr-6">
                   <Link href="#">
-                    <FiLinkedin className="w-6 h-6 hover:text-blue-400" />
+                    <FiLinkedin className="w-6 h-6 hover:text-purple-600" />
                   </Link>
                 </li>
                 <li className="mr-6">
                   <Link href="#">
-                    <FiPhoneCall className="w-6 h-6 hover:text-blue-400" />
+                    <FiPhoneCall className="w-6 h-6 hover:text-purple-600" />
                   </Link>
                 </li>
               </ul>
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
       {/* footer bottom */}
-      <div className="border-t border-slate-200 bg-white flex justify-center py-2">
+      <div className="border-t border-slate-200 bg-slate-200 shadow flex justify-center py-2">
         <div className="text-base">
           All rights reserved by
         </div>
