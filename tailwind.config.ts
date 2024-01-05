@@ -30,7 +30,7 @@ const config: Config = {
             maxWidth: "1280px",
           },
           "@screen xl": {
-            maxWidth: "1600px",
+            maxWidth: "1400px",
           },
         },
       });
