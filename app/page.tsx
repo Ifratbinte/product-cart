@@ -1,11 +1,10 @@
 "use client";
-import DynamicRoute from "@/components/DynamicRoute";
 import ProductCard from "@/components/card";
 import ProductInterface from "@/interfaces/product-interface";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import { add } from "@/store/cart/CartSlice";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
 const Products = () => {
   const [products, setProducts] = useState<ProductInterface[]>([]);
@@ -27,6 +26,7 @@ const Products = () => {
   const handleAdd = (item: any) => {
     dispatch(add(item));
   };
+
   return (
     <main className="min-h-screen">
       <div className="container mx-auto my-10">

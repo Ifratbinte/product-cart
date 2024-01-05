@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 const Nav = () => {
   // const ProductItem:any = useSelector((state:any)=> {state.cart})
 
-  const item = useSelector((state: any) => state.cart);
+  const { total_quantity } = useSelector((state: any) => state.cart);
 
   return (
     <div className="flex items-center">
@@ -15,7 +15,7 @@ const Nav = () => {
             return <NavItem key={index} title={item.title} path={item.path} />;
           })}
       </ul>
-      <div className="text-lg font-medium ml-4">Items : {item.length}</div>
+      <div className="text-lg font-medium ml-4">Items : {total_quantity}</div>
     </div>
   );
 };

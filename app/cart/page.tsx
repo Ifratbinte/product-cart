@@ -1,18 +1,16 @@
 "use client";
-import React from "react";
 import {
   decrementQuantity,
-  incrementByAmount,
   incrementQuantity,
   remove,
 } from "@/store/CartSlice";
+import { FaTrashAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { FaTimes, FaTrashAlt } from "react-icons/fa";
 import CartInvoice from "./cartInvoice";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state: any) => state.cart);
+  const { data } = useSelector((state: any) => state.cart);
 
   const handleRemove = (id: number) => {
     dispatch(remove(id));
@@ -22,7 +20,7 @@ const Cart = () => {
     <div className="container mx-auto min-h-screen">
       <div className="text-2xl font-medium text-center my-6">Cart page</div>
       <div className="w-2/3 mx-auto">
-        {cartItems.map((item: any, i: number) => (
+        {data.map((item: any, i: number) => (
           <div
             className="flex items-center justify-between mb-6 py-3 px-6 rounded bg-slate-50"
             key={i}
@@ -35,14 +33,14 @@ const Cart = () => {
             <div className="w-1/4 flex gap-4">
               <button
                 className="text-lg p-1 bg-slate-100 h-6 w-6 flex items-center justify-center border border-slate-200 cursor-pointer"
-                onClick={() => dispatch(incrementQuantity())}
+                onClick={() => dispatch(incrementQuantity(item.id))}
               >
                 +
               </button>
               <span>{item.quantity}</span>
               <button
                 className="text-lg p-1 bg-slate-100 h-6 w-6 flex items-center justify-center border border-slate-200 cursor-pointer"
-                onClick={() => dispatch(decrementQuantity())}
+                onClick={() => dispatch(decrementQuantity(item.id))}
               >
                 -
               </button>

@@ -1,5 +1,5 @@
-import React from "react";
 import ProductInterface from "@/interfaces/product-interface";
+import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
 
 const ProductCard: React.FC<ProductInterface> = ({
