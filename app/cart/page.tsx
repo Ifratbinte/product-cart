@@ -6,7 +6,6 @@ import {
 } from "@/store/CartSlice";
 import { FaTrashAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import CartInvoice from "./cartInvoice";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -53,7 +52,6 @@ const Cart = () => {
             </button>
           </div>
         ))}
-        <CartInvoice subtotal="" total="" />
       </div>
     </div>
   );

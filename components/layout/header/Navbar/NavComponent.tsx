@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import navItems, { NavInterface } from "./MenuItems";
 import NavItem from "./NavItem";
+import { SlHandbag } from "react-icons/sl";
 
 const Nav = () => {
   // const ProductItem:any = useSelector((state:any)=> {state.cart})
@@ -15,7 +16,12 @@ const Nav = () => {
             return <NavItem key={index} title={item.title} path={item.path} />;
           })}
       </ul>
-      <div className="text-lg font-medium ml-4">Items : {total_quantity}</div>
+      <div className="relative cursor-pointer ml-3">
+        <SlHandbag className="font-medium text-xl hover:text-purple-600"/>
+        <div className="text-xs font-medium absolute -top-3 -right-2 bg-purple-600 text-white h-4 w-4 flex items-center justify-center rounded-full">{total_quantity}</div>
+      </div>
+
+      
     </div>
   );
 };
